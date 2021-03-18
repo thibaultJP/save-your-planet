@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:save/widgets/menuWidget.dart';
 
 class ScaffoldDefis extends StatelessWidget {
 
@@ -13,6 +14,7 @@ class ScaffoldDefis extends StatelessWidget {
       appBar: new AppBar(
         title: Text(title),
       ),
+      bottomNavigationBar: new MenuWidget(),
     );
   }
 }
