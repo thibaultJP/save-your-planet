@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:save/pageProfil.dart';
+import 'package:save/pageQuiz.dart';
 import 'home.dart';
-
+import 'package:save/pageDefis.dart';
+import 'package:save/pageCarte.dart';
 
 class MyApp extends StatelessWidget {
 
@@ -14,6 +17,12 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
+      routes: {
+        '/pageQuiz': (context) => ScaffoldQuiz('Quiz'),
+        '/pageProfil': (context) => ScaffoldProfil('Profil'),
+        '/pageDefis': (context) => ScaffoldDefis('Défis'),
+        '/pageCarte': (context) => ScaffoldCarte('Carte'),
+      },
+      initialRoute: '/');
   }
 }

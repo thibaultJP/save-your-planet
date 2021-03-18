@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:save/pageProfil.dart';
+import 'my-app.dart';
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
   final String title;
@@ -39,32 +41,38 @@ class _MyHomePageState extends State<MyHomePage> {
 
               decoration: decorationMenu(),
               child: new Center(
-                child: Stack(
-                  children: <Widget>[
-                    Text(
-                      'Profil',
-                      style: GoogleFonts.quicksand(
-                        textStyle: TextStyle(
-                          fontSize: 20,
-                          foreground: Paint()
-                            ..style = PaintingStyle.stroke
-                            ..strokeWidth = 5
-                            ..color = Colors.black12,
+                child: FlatButton(
+                  minWidth: width/5,
+                  height: height/9,
+                  padding: EdgeInsets.all(0),
+                  color: Colors.transparent,
+                  onPressed: goToProfil,
+                  child: Stack(
+                    children: <Widget>[
+                      Text(
+                        'Profil',
+                        style: GoogleFonts.quicksand(
+                          textStyle: TextStyle(
+                            fontSize: 20,
+                            foreground: Paint()
+                              ..style = PaintingStyle.stroke
+                              ..strokeWidth = 5
+                              ..color = Colors.black12,
+                          ),
                         ),
                       ),
-                    ),
-                    Text(
-                      'Profil',
-                      style: GoogleFonts.quicksand(
-                        textStyle: TextStyle(
-                          fontSize: 20,
-                          color: text_menu_color,
+                      Text(
+                        'Profil',
+                        style: GoogleFonts.quicksand(
+                          textStyle: TextStyle(
+                            fontSize: 20,
+                            color: text_menu_color,
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-
               ),
 
             ),
@@ -75,33 +83,40 @@ class _MyHomePageState extends State<MyHomePage> {
 
               decoration: decorationMenu(),
               child: new Center(
-                child: Stack(
-                  children: <Widget>[
-                    Text(
-                      'Quiz',
-                      style: GoogleFonts.quicksand(
-                        textStyle: TextStyle(
-                          fontSize: 20,
-                          foreground: Paint()
-                            ..style = PaintingStyle.stroke
-                            ..strokeWidth = 5
-                            ..color = Colors.black12,
+                child: FlatButton(
+                  minWidth: width/5,
+                  height: height/9,
+                  padding: EdgeInsets.all(0),
+                  color: Colors.transparent,
+                  onPressed: goToQuiz,
+                  child: Stack(
+                    children: <Widget>[
+                      Text(
+                        'Quiz',
+                        style: GoogleFonts.quicksand(
+                          textStyle: TextStyle(
+                            fontSize: 20,
+                            foreground: Paint()
+                              ..style = PaintingStyle.stroke
+                              ..strokeWidth = 5
+                              ..color = Colors.black12,
+                          ),
                         ),
                       ),
-                    ),
-                    Text(
-                      'Quiz',
-                      style: GoogleFonts.quicksand(
-                        textStyle: TextStyle(
-                          fontSize: 20,
-                          color: text_menu_color,
+                      Text(
+                        'Quiz',
+                        style: GoogleFonts.quicksand(
+                          textStyle: TextStyle(
+                            fontSize: 20,
+                            color: text_menu_color,
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-
               ),
+
             ),
             new Container(
                 height: height/9,
@@ -118,11 +133,17 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
 
             new Container(
-                height: height/9,
-                width: width/5,
+              height: height/9,
+              width: width/5,
 
-                decoration: decorationMenu(),
-                child: new Center(
+              decoration: decorationMenu(),
+              child: new Center(
+                child: FlatButton(
+                  minWidth: width/5,
+                  height: height/9,
+                  padding: EdgeInsets.all(0),
+                  color: Colors.transparent,
+                  onPressed: goToDefis,
                   child: Stack(
                     children: <Widget>[
                       Text(
@@ -148,15 +169,22 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ],
                   ),
-
                 ),
+              ),
+
             ),
             new Container(
-                height: height/9,
-                width: width/5,
+              height: height/9,
+              width: width/5,
 
-                decoration: decorationMenu(),
-                child: new Center(
+              decoration: decorationMenu(),
+              child: new Center(
+                child: FlatButton(
+                  minWidth: width/5,
+                  height: height/9,
+                  padding: EdgeInsets.all(0),
+                  color: Colors.transparent,
+                  onPressed: goToCarte,
                   child: Stack(
                     children: <Widget>[
                       Text(
@@ -182,8 +210,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ],
                   ),
-
                 ),
+              ),
+
             ),
           ],
         ),
@@ -222,4 +251,19 @@ class _MyHomePageState extends State<MyHomePage> {
     );
 
   }
+  void goToProfil(){
+    Navigator.pushNamed(context, '/pageProfil');
+    }
+
+  void goToQuiz(){
+    Navigator.pushNamed(context, '/pageQuiz');
+  }
+  void goToDefis(){
+    Navigator.pushNamed(context, '/pageDefis');
+  }
+  void goToCarte(){
+    Navigator.pushNamed(context, '/pageCarte');
+  }
+
+
 }
