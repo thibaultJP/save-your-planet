@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:save/widgets/background.dart';
+import 'package:save/widgets/headerWidget.dart';
 import 'package:save/widgets/menuWidget.dart';
 class ScaffoldCarte extends StatelessWidget {
 
@@ -13,14 +14,12 @@ class ScaffoldCarte extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return new Scaffold(
-      appBar: new AppBar(
-        title: Text(title),
-      ),
-      body: Center(
 
-        child: new Container(
+      body: Container(
+
+
           decoration: decorationBackground(),
-        ),
+          child: new HeaderWidget()
       ),
       bottomNavigationBar: new MenuWidget(),
 

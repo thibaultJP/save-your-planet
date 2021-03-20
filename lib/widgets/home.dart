@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:save/pageProfil.dart';
+import 'package:save/widgets/headerWidget.dart';
 import 'package:save/widgets/menuWidget.dart';
 import 'my-app.dart';
 import 'package:save/widgets/background.dart';
@@ -23,15 +24,14 @@ class _MyHomePageState extends State<MyHomePage> {
     final width = mediaQueryData.size.width;
     final height = mediaQueryData.size.height;
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
 
-        child: new Container(
+      body: Container(
+
+
           decoration: decorationBackground(),
+          child: new HeaderWidget()
         ),
-      ),
+
       bottomNavigationBar: new MenuWidget(),
     );
   }

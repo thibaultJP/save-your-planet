@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 BoxDecoration decorationBackground(){
   return BoxDecoration(
+
     gradient: LinearGradient(
       begin: Alignment.bottomLeft,
       end: Alignment.topRight,

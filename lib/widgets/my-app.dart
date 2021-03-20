@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       debugShowCheckedModeBanner: false,
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'My planet'),
       routes: {
         '/pageQuiz': (context) => ScaffoldQuiz('Quiz'),
         '/pageProfil': (context) => ScaffoldProfil('Profil'),
