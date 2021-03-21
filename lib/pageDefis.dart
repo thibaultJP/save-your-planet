@@ -30,25 +30,46 @@ class ScaffoldDefis extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children :[
             HeaderWidget(),
-            Container(
-                width: width/2,
-                height: height/12,
-                margin: EdgeInsets.only(top:height/10),
-              decoration: decorationTitreDefis(),
-              child: new Center(
-                child:new Text(
-                  'Défis',
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.quicksand(
-                  textStyle: TextStyle(
-                    fontSize: 35,
-                    color: Color.fromRGBO(184, 225, 234, 1),
+            Row(
+              children: [
+                new Container(
+                  width: width/2,
+                  height: height/12,
+                  margin: EdgeInsets.only(top:height/10),
+                decoration: decorationTitreDefis(),
+                child: new Center(
+                  child:new Text(
+                    'Défis',
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.quicksand(
+                    textStyle: TextStyle(
+                      fontSize: 30,
+                      color: Color.fromRGBO(184, 225, 234, 1),
+                      ),
                     ),
                   ),
                 ),
+                ),
+                new Container(
+                  width: width/2,
+                  height: height/12,
+                  margin: EdgeInsets.only(top:height/10),
+                  decoration: decorationTitreDefisRealise(),
+                  child: new Center(
+                    child:new Text(
+                      'Défis réalisés',
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.quicksand(
+                        textStyle: TextStyle(
+                          fontSize: 30,
+                          color: Color.fromRGBO(184, 225, 234, 1),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                ],
               ),
-              ),
-
             Container(
             margin: EdgeInsets.only(top: 0,bottom: 0),
             padding: EdgeInsets.all(0),
@@ -226,7 +247,24 @@ class ScaffoldDefis extends StatelessWidget {
   BoxDecoration decorationTitreDefis() {
     return BoxDecoration(
       boxShadow: [BoxShadow(color:Colors.black54, blurRadius: 5.0,spreadRadius: 0.5,offset: Offset(2.0,2.0))],
-      borderRadius: new BorderRadius.all(Radius.circular(10.0)),
+      borderRadius: new BorderRadius.only(topLeft: Radius.circular(10.0),bottomLeft: Radius.circular(10.0)),
+
+      gradient: new RadialGradient(
+        radius: 2,
+
+        colors: <Color>[
+          Color.fromRGBO(62, 106, 64, 0.72),
+          Color.fromRGBO(91, 129, 81, 1),
+
+        ],
+
+      ),
+    );
+  }
+  BoxDecoration decorationTitreDefisRealise() {
+    return BoxDecoration(
+      boxShadow: [BoxShadow(color:Colors.black54, blurRadius: 5.0,spreadRadius: 0.5,offset: Offset(2.0,2.0))],
+      borderRadius: new BorderRadius.only(topRight: Radius.circular(10.0),bottomRight: Radius.circular(10.0)),
       gradient: new RadialGradient(
         radius: 2,
 
